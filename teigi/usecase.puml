@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+
+actor "利用者" as User
+
+rectangle "献立提案システム"{
+
+usecase "食材を入力する" as UC1
+usecase "献立種類を選択する" as UC2
+usecase "献立を検索する" as UC3
+usecase "おすすめ献立を閲覧する" as UC4
+usecase "エラーを表示する" as UC5
+
+}
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+
+UC3 ..> UC5 : <<extend>>
+
+@enduml
