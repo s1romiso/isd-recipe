@@ -1,0 +1,254 @@
+\documentclass[a4paper,12pt]{jarticle}
+
+\usepackage[dvipdfmx]{geometry}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+
+\geometry{margin=25mm}
+
+\title{要求仕様書\\献立提案システム}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{システム概要}
+
+本システムは、日々の献立を考える負担を軽減することを目的としたWebシステムである。
+ユーザが現在所有している食材を入力すると、その食材を参考にしたおすすめの献立を提案する。
+
+なお、本システムは段階的な機能拡張を前提として開発を行う。
+
+\section{機能要求}
+
+\subsection{FR-01 食材入力機能}
+
+\subsubsection*{概要}
+ユーザは使用可能な食材を自由入力できる。
+
+\subsubsection*{入力}
+\begin{itemize}
+    \item 食材名（複数入力可）
+    \item 入力形式は自由入力
+\end{itemize}
+
+\subsubsection*{出力}
+入力内容を献立検索機能へ受け渡す。
+
+\subsubsection*{将来拡張}
+\begin{itemize}
+    \item 入力補完
+    \item 食材候補表示
+    \item 音声入力
+    \item 画像認識による入力
+\end{itemize}
+
+\subsection{FR-02 献立検索機能}
+
+\subsubsection*{概要}
+入力された食材をもとにおすすめ献立を検索する。
+
+\subsubsection*{条件}
+\begin{itemize}
+    \item 入力食材の一部が使用されていれば候補とする。
+    \item 入力食材をすべて使用する必要はない。
+\end{itemize}
+
+\subsubsection*{将来拡張}
+\begin{itemize}
+    \item 使用率順で検索
+    \item 調理時間による絞り込み
+    \item カロリーによる絞り込み
+    \item 栄養バランスによる検索
+\end{itemize}
+
+\subsection{FR-03 献立提案機能}
+
+\subsubsection*{概要}
+検索結果からおすすめ献立を表示する。
+
+\subsubsection*{表示件数}
+3件
+
+\subsubsection*{表示内容}
+\begin{itemize}
+    \item 献立名
+\end{itemize}
+
+\subsubsection*{将来拡張}
+\begin{itemize}
+    \item レシピ表示
+    \item 材料表示
+    \item 調理時間表示
+    \item 栄養情報表示
+    \item 人気順表示
+\end{itemize}
+
+\subsection{FR-04 献立種類選択機能}
+
+\subsubsection*{概要}
+検索前に表示する献立の種類を選択できる。
+
+\subsubsection*{選択項目}
+\begin{itemize}
+    \item 献立一式
+    \item 主菜
+    \item 副菜
+    \item 汁物
+\end{itemize}
+
+\subsubsection*{将来拡張}
+\begin{itemize}
+    \item デザート
+    \item お弁当
+    \item 朝食
+    \item 作り置き料理
+\end{itemize}
+
+\subsection{FR-05 エラー表示機能}
+
+\subsubsection*{概要}
+入力された食材名が認識できない場合、エラーメッセージを表示する。
+
+\subsubsection*{エラー例}
+\begin{itemize}
+    \item 登録されていない食材です。
+    \item 食材を入力してください。
+\end{itemize}
+
+\subsubsection*{将来拡張}
+\begin{itemize}
+    \item 類似食材候補の提示
+    \item 誤字修正候補
+    \item 入力補完
+\end{itemize}
+
+\section{非機能要求}
+
+\subsection{NFR-01 利用環境}
+
+Webブラウザ上で利用できること。
+
+\subsection{NFR-02 操作性}
+
+誰でも直感的に利用できる画面構成とする。
+
+\subsection{NFR-03 応答性能}
+
+検索開始から検索結果表示までを短時間で完了できること。
+
+※具体的な応答時間は今後決定する。
+
+\subsection{NFR-04 保守性}
+
+機能追加・仕様変更が容易な構成とする。
+
+\subsection{NFR-05 拡張性}
+
+以下のような機能追加が可能な設計とする。
+
+\begin{itemize}
+    \item レシピ表示
+    \item AIによる献立提案
+    \item 栄養管理
+    \item アレルギー対応
+    \item 人数指定
+    \item 冷蔵庫管理
+    \item お気に入り登録
+    \item 履歴表示
+\end{itemize}
+
+\section{入力仕様}
+
+\begin{longtable}{|p{4cm}|p{9cm}|}
+\hline
+項目 & 内容\\
+\hline
+入力方式 & 自由入力\\
+\hline
+入力数 & 複数\\
+\hline
+必須入力 & 食材名\\
+\hline
+入力例 & 鶏肉、玉ねぎ、卵\\
+\hline
+\end{longtable}
+
+\section{出力仕様}
+
+\begin{longtable}{|p{4cm}|p{9cm}|}
+\hline
+項目 & 内容\\
+\hline
+提案件数 & 3件\\
+\hline
+表示内容 & 献立名\\
+\hline
+\end{longtable}
+
+\section{エラー仕様}
+
+\begin{longtable}{|p{6cm}|p{7cm}|}
+\hline
+条件 & 処理\\
+\hline
+食材未入力 & エラーメッセージ表示\\
+\hline
+存在しない食材 & エラーメッセージ表示\\
+\hline
+\end{longtable}
+
+\section{システム構成}
+
+\begin{center}
+利用者
+
+$\downarrow$
+
+食材入力
+
+$\downarrow$
+
+献立種類選択
+
+$\downarrow$
+
+検索
+
+$\downarrow$
+
+おすすめ献立表示
+\end{center}
+
+\section{今後の拡張方針}
+
+本システムは段階的な開発を前提とする。
+
+\subsection*{初期バージョン}
+
+\begin{itemize}
+    \item 食材入力
+    \item 献立種類選択
+    \item 献立検索
+    \item 献立名表示
+    \item エラー表示
+\end{itemize}
+
+\subsection*{将来的な追加機能}
+
+\begin{itemize}
+    \item 入力候補表示
+    \item レシピ表示
+    \item 栄養情報表示
+    \item AIによる献立提案
+    \item アレルギー対応
+    \item 人数指定
+    \item 冷蔵庫管理
+    \item 履歴機能
+    \item お気に入り機能
+\end{itemize}
+
+\end{document}
