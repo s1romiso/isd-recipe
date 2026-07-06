@@ -1,3 +1,5 @@
+import random
+
 def select_menu(user_input, recipe_data):
     
     # 1. カテゴリごとの候補を入れる空のリストを用意する
@@ -13,6 +15,8 @@ def select_menu(user_input, recipe_data):
         # 最初は「作れる（True）」と信じてスタートする
         is_match = True
         
+
+        #user_inputにある材料をひとつ保存して、それをレシピと照合して
         for item in user_input:
     #一個ずつチェックしてく
             if item not in recipe["ingredients"]:
@@ -32,12 +36,15 @@ def select_menu(user_input, recipe_data):
             elif category == "soup":
                 matched_soups.append(name)
 
-    # 5. Aさんに返す結果を、最大3つまでに絞って辞書型にまとめる
-    # Pythonの「[:3]」は、リストの最初から3つ目までを切り取る（スライス）という便利な書き方です
+    def get_random_three(matched_list):
+        if len(matched_list) > 3:
+            return random.sample(matched_list, 3)  # 3つより多ければランダムに3つ選ぶ
+        return matched_list
+
     suggested_menu = {
-        "main": matched_mains[:3],
-        "side": matched_sides[:3],
-        "soup": matched_soups[:3]
+        "main": get_random_three(matched_mains),
+        "side": get_random_three(matched_sides),
+        "soup": get_random_three(matched_soups),
     }
     
     return suggested_menu
