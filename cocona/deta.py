@@ -1,22 +1,25 @@
 def select_menu(user_input, recipe_data):
     
     # 1. カテゴリごとの候補を入れる空のリストを用意する
-    matched_mains = []   # 主食（main）の候補
-    matched_sides = []   # 副菜（side）の候補
-    matched_soups = []   # 汁物（soup）の候補
+    matched_mains = [] 
+    matched_sides = []
+    matched_soups = [] 
 
     # 2. レシピデータを1つずつループで回してチェックする
     #recipe_data（レシピのリスト）の中から、データを1つずつ取り出して recipe という変数に入れながら、中身がなくなるまで繰り返してね
     for recipe in recipe_data:
         
-        # 3. 「一部が当てはまるか」をチェックするフラグ
-        is_match = False
-        for ingredient in recipe["ingredients"]:
-            # レシピに必要な材料のどれか1つでも、ユーザーの入力リストにあればOK
-            if ingredient in user_input:
-                is_match = True
-                break  # 1つでも見つかれば、このレシピの他の材料はチェックしなくていいので抜ける
+ # 3. 「すべての食材が揃っているか」をチェックする
+        # 最初は「作れる（True）」と信じてスタートする
+        is_match = True 
         
+        for ingredient in recipe["ingredients"]:
+#一個ずつチェックしてく
+            if ingredient not in user_input:
+                is_match = False 
+
+                break  # これ以上他の材料を調べても意味がないので、ループを抜ける
+
         # 4. 食材がマッチしていたら、カテゴリ別に仕分ける
         if is_match:
             category = recipe["category"]
@@ -39,39 +42,3 @@ def select_menu(user_input, recipe_data):
     
     return suggested_menu
 
-
-# --- ここから下は自分のパソコンでテストするためのエリア ---
-if __name__ == "__main__":
-    # Aさんから届く想定の入力データ（リスト型）
-    test_user_input = ["トマト", "豚肉"]
-    
-    # Cさんが用意してくれる形式のテストデータ
-    test_recipe_data = [
-        {
-            "id": 1,
-            "name": "豚肉と玉ねぎの生姜焼き",
-            "category": "main",
-            "ingredients": ["豚肉", "玉ねぎ"]
-        },
-        {
-            "id": 2,
-            "name": "トマトスープ",
-            "category": "soup",
-            "ingredients": ["トマト", "玉ねぎ"]
-        },
-        {
-            "id": 3,
-            "name": "即席トマトサラダ",
-            "category": "side",
-            "ingredients": ["トマト"]
-        }
-    ]
-    
-    # 関数を動かしてみる
-    result = generate_menu(test_user_input, test_recipe_data)
-    
-    # 結果を表示
-    print("--- 提案されたメニュー候補（最大3件ずつ） ---")
-    print("主食:", result["main"])
-    print("副菜:", result["side"])
-    print("汁物:", result["soup"])
