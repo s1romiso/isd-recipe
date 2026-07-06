@@ -1,4 +1,4 @@
-from suggest import suggest_menu
+from cocona.deta import suggest_menu
 
 # 主菜・副菜・汁物の選択
 def select_menu_type():
