@@ -2,22 +2,21 @@ import random
 
 def select_menu(user_input, recipe_data):
     
-    # 1. カテゴリごとの候補を入れる空のリストを用意する
+    #カテゴリごとの候補を入れる空のリストを用意する
     matched_mains = [] 
     matched_sides = []
     matched_soups = [] 
 
-    # 2. レシピデータを1つずつループで回してチェックする
-    #recipe_data（レシピのリスト）の中から、データを1つずつ取り出して recipe という変数に入れながら、中身がなくなるまで繰り返してね
+#recipe_dataからrecipeにデータをひとつ保存をループ
     for recipe in recipe_data:
-        is_match = True
+        is_match = True #まずはあってるで考える
         #user_inputにある材料をひとつ保存して、それをレシピと照合して、なければそのレシピは×
         for item in user_input:
             if item not in recipe["ingredients"]:
                 is_match = False 
                 break 
 
-
+     #分類わけ
         if is_match:
             category = recipe["category"]
             name = recipe["name"]
@@ -28,10 +27,11 @@ def select_menu(user_input, recipe_data):
                 matched_sides.append(name)
             elif category == "soup":
                 matched_soups.append(name)
-
+                
+# 3つより多ければランダムに3つ選ぶ
     def get_random_three(matched_list):
         if len(matched_list) > 3:
-            return random.sample(matched_list, 3)  # 3つより多ければランダムに3つ選ぶ
+            return random.sample(matched_list, 3)  
         return matched_list
 
     suggested_menu = {
