@@ -10,21 +10,14 @@ def select_menu(user_input, recipe_data):
     # 2. レシピデータを1つずつループで回してチェックする
     #recipe_data（レシピのリスト）の中から、データを1つずつ取り出して recipe という変数に入れながら、中身がなくなるまで繰り返してね
     for recipe in recipe_data:
-        
- # 3. 「すべての食材が揃っているか」をチェックする
-        # 最初は「作れる（True）」と信じてスタートする
         is_match = True
-        
-
-        #user_inputにある材料をひとつ保存して、それをレシピと照合して
+        #user_inputにある材料をひとつ保存して、それをレシピと照合して、なければそのレシピは×
         for item in user_input:
-    #一個ずつチェックしてく
             if item not in recipe["ingredients"]:
                 is_match = False 
+                break 
 
-                break  # これ以上他の材料を調べても意味がないので、ループを抜ける
 
-        # 4. 食材がマッチしていたら、カテゴリ別に仕分ける
         if is_match:
             category = recipe["category"]
             name = recipe["name"]
