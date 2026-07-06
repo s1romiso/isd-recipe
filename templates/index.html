@@ -36,7 +36,11 @@
                 {% if suggested_menu.main %}
                     <ol>
                         {% for menu in suggested_menu.main %}
-                            <li>{{ menu }}</li>
+                        <li>
+                            <a href="https://cookpad.com/search/{{ menu }}" target="_blank">
+                                {{ menu }}
+                            </a>
+                        </li>
                         {% endfor %}
                     </ol>
                 {% else %}
@@ -49,7 +53,11 @@
                 {% if suggested_menu.side %}
                     <ol>
                         {% for menu in suggested_menu.side %}
-                            <li>{{ menu }}</li>
+                        <li>
+                            <a href="https://cookpad.com/search/{{ menu }}" target="_blank">
+                                {{ menu }}
+                            </a>
+                        </li>
                         {% endfor %}
                     </ol>
                 {% else %}
@@ -62,7 +70,11 @@
                 {% if suggested_menu.soup %}
                     <ol>
                         {% for menu in suggested_menu.soup %}
-                            <li>{{ menu }}</li>
+                            <li>
+                                <a href="https://cookpad.com/search/{{ menu }}" target="_blank">
+                                    {{ menu }}
+                                </a>
+                            </li>
                         {% endfor %}
                     </ol>
                 {% else %}
