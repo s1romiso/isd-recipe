@@ -11,11 +11,11 @@ def select_menu(user_input, recipe_data):
         
  # 3. 「すべての食材が揃っているか」をチェックする
         # 最初は「作れる（True）」と信じてスタートする
-        is_match = True 
+        is_match = True
         
-        for ingredient in recipe["ingredients"]:
-#一個ずつチェックしてく
-            if ingredient not in user_input:
+        for item in user_input:
+    #一個ずつチェックしてく
+            if item not in recipe["ingredients"]:
                 is_match = False 
 
                 break  # これ以上他の材料を調べても意味がないので、ループを抜ける
