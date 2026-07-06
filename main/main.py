@@ -1,6 +1,5 @@
 from cocona.deta import select_menu
-from data.data import recipe_data
-
+from data.data import recipes
 # 主菜・副菜・汁物の選択
 def select_menu_type():
     print("提案してほしい献立の種類を選んでください")
@@ -68,7 +67,7 @@ def main():
     if menu_type is None:
         return
 
-    suggested_menu = select_menu(user_input, recipe_data)
+    suggested_menu = select_menu(user_input, recipes)
 
     print_suggested_menu(suggested_menu, menu_type)
 
