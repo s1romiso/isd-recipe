@@ -67,7 +67,8 @@ def main():
     if menu_type is None:
         return
 
-    suggested_menu = select_menu(user_input, recipes)
+    user_ingredients = user_input.split()
+    suggested_menu = select_menu(user_ingredients, recipes)
 
     print_suggested_menu(suggested_menu, menu_type)
 
