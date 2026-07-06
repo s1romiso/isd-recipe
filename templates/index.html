@@ -35,11 +35,13 @@
                 <h3>主菜</h3>
                 {% if suggested_menu.main %}
                     <ol>
+                        {% for menu in suggested_menu.main %}
                         <li>
                             <a href="https://cookpad.com/search/{{ menu }}" target="_blank">
                                 {{ menu }}
                             </a>
                         </li>
+                        {% endfor %}
                     </ol>
                 {% else %}
                     <p>該当する料理が見つかりませんでした。</p>
