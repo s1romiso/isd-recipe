@@ -157,7 +157,7 @@ recipes = [
         "category": "main",
         "ingredients": ["ひき肉", "チーズ", "トマト"],
         "steps": ["1. ミートソースを作る。", "2. 生地とソースを重ねる。", "3. チーズをのせる。", "4. 焼く。"], 
-        "genre": "イタリアン"
+        "genre": "洋食"
     },
     {
         "id": 21,
@@ -218,738 +218,861 @@ recipes = [
         "id": 28,
         "name": "鶏の甘酢あん",
         "category": "main",
-        "ingredients": ["鶏肉", "玉ねぎ", "ピーマン"]
+        "ingredients": ["鶏肉", "玉ねぎ", "ピーマン"],
+        "genre": "和食"
     },
     {
         "id": 29,
         "name": "豚の角煮",
         "category": "main",
-        "ingredients": ["豚バラ肉", "大根", "しょうが"]
+        "ingredients": ["豚バラ肉", "大根", "しょうが"],
+        "genre": "和食"
     },
     {
         "id": 30,
         "name": "アジフライ",
         "category": "main",
-        "ingredients": ["アジ", "パン粉", "卵"]
+        "ingredients": ["アジ", "パン粉", "卵"],
+        "genre": "洋食"
     },
     {
         "id": 31,
         "name": "カレイの煮付け",
         "category": "main",
-        "ingredients": ["カレイ", "しょうが"]
+        "ingredients": ["カレイ", "しょうが"],
+        "genre": "和食"
     },
     {
         "id": 32,
         "name": "鮭のホイル焼き",
         "category": "main",
-        "ingredients": ["鮭", "しめじ", "玉ねぎ", "バター"]
+        "ingredients": ["鮭", "しめじ", "玉ねぎ", "バター"],
+        "genre": "和食"
     },
     {
         "id": 33,
         "name": "アクアパッツァ",
         "category": "main",
-        "ingredients": ["白身魚", "あさり", "ミニトマト"]
+        "ingredients": ["白身魚", "あさり", "ミニトマト"],
+        "genre": "洋食"
     },
     {
         "id": 34,
         "name": "ポークチャップ",
         "category": "main",
-        "ingredients": ["豚肉", "玉ねぎ"]
+        "ingredients": ["豚肉", "玉ねぎ"],
+        "genre": "洋食"
     },
     {
         "id": 35,
         "name": "チキンカツ",
         "category": "main",
-        "ingredients": ["鶏むね肉", "パン粉", "卵"]
+        "ingredients": ["鶏むね肉", "パン粉", "卵"],
+        "genre": "洋食"
     },
     {
         "id": 36,
         "name": "クリームシチュー",
         "category": "main",
-        "ingredients": ["鶏肉", "じゃがいも", "にんじん", "玉ねぎ", "牛乳"]
+        "ingredients": ["鶏肉", "じゃがいも", "にんじん", "玉ねぎ", "牛乳"],
+        "genre": "洋食"
     },
     {
         "id": 37,
         "name": "ポークソテー",
         "category": "main",
-        "ingredients": ["豚ロース肉"]
+        "ingredients": ["豚ロース肉"],
+        "genre": "洋食"
     },
     {
         "id": 38,
         "name": "油淋鶏",
         "category": "main",
         "ingredients": ["鶏もも肉", "長ねぎ"],
+        "genre": "中華"
     },
     {
         "id": 39,
         "name": "麻婆豆腐",
         "category": "main",
-        "ingredients": ["豆腐", "豚ひき肉", "長ねぎ"]
+        "ingredients": ["豆腐", "豚ひき肉", "長ねぎ"],
+        "genre": "中華"
     },
     {
         "id": 40,
         "name": "ニラレバ炒め",
         "category": "main",
-        "ingredients": ["豚レバー", "ニラ", "もやし"]
+        "ingredients": ["豚レバー", "ニラ", "もやし"],
+        "genre": "中華"
     },
     {
         "id": 41,
         "name": "鶏肉とカシューナッツ炒め",
         "category": "main",
-        "ingredients": ["鶏肉", "カシューナッツ", "ピーマン", "玉ねぎ"]
+        "ingredients": ["鶏肉", "カシューナッツ", "ピーマン", "玉ねぎ"],
+        "genre": "中華"
     },
     {
         "id": 42,
         "name": "チャプチェ",
         "category": "main",
-        "ingredients": ["春雨", "牛肉", "にんじん", "ピーマン"]
+        "ingredients": ["春雨", "牛肉", "にんじん", "ピーマン"],
+        "genre": "韓国"
     },
     {
         "id": 43,
         "name": "チーズタッカルビ",
         "category": "main",
-        "ingredients": ["鶏肉", "キャベツ", "玉ねぎ", "チーズ"]
+        "ingredients": ["鶏肉", "キャベツ", "玉ねぎ", "チーズ"],
+        "genre": "韓国"
     },
     {
         "id": 44,
         "name": "メンチカツ",
         "category": "main",
-        "ingredients": ["合いびき肉", "玉ねぎ", "パン粉", "卵"]
+        "ingredients": ["合いびき肉", "玉ねぎ", "パン粉", "卵"],
+        "genre": "洋食"
     },
     {
         "id": 45,
         "name": "さわらの西京焼き",
         "category": "main",
-        "ingredients": ["さわら", "味噌"]
+        "ingredients": ["さわら", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 46,
         "name": "チキンピカタ",
         "category": "main",
-        "ingredients": ["鶏むね肉", "卵"]
+        "ingredients": ["鶏むね肉", "卵"],
+        "genre": "洋食"
     },
     {
         "id": 47,
         "name": "メカジキのソテー",
         "category": "main",
-        "ingredients": ["メカジキ", "バター"]
+        "ingredients": ["メカジキ", "バター"],
+        "genre": "洋食"
     },
     {
         "id": 48,
         "name": "豚しゃぶ",
         "category": "main",
-        "ingredients": ["豚肉", "レタス"]
+        "ingredients": ["豚肉", "レタス"],
+        "genre": "和食"
     },
     {
         "id": 49,
         "name": "鶏団子の甘酢あん",
         "category": "main",
-        "ingredients": ["鶏ひき肉", "玉ねぎ", "ピーマン"]
+        "ingredients": ["鶏ひき肉", "玉ねぎ", "ピーマン"],
+        "genre": "和食"
     },
     {
         "id": 50,
         "name": "白身魚のフライ",
         "category": "main",
-        "ingredients": ["白身魚", "パン粉", "卵"]
+        "ingredients": ["白身魚", "パン粉", "卵"],
+        "genre": "洋食"
     },
     {
         "id": 101,
         "name": "ポテトサラダ",
         "category": "side",
-        "ingredients": ["じゃがいも", "きゅうり", "にんじん", "ハム"]
+        "ingredients": ["じゃがいも", "きゅうり", "にんじん", "ハム"],
+        "genre": "洋食"
     },
     {
         "id": 102,
         "name": "ほうれん草のおひたし",
         "category": "side",
-        "ingredients": ["ほうれん草", "かつお節"]
+        "ingredients": ["ほうれん草", "かつお節"],
+        "genre": "和食"
     },
     {
         "id": 103,
         "name": "きんぴらごぼう",
         "category": "side",
-        "ingredients": ["ごぼう", "にんじん"]
+        "ingredients": ["ごぼう", "にんじん"],
+        "genre": "和食"
     },
     {
         "id": 104,
         "name": "マカロニサラダ",
         "category": "side",
-        "ingredients": ["マカロニ", "きゅうり", "ハム", "人参"]
+        "ingredients": ["マカロニ", "きゅうり", "ハム", "人参"],
+        "genre": "洋食"
     },
     {
         "id": 105,
         "name": "ひじきの煮物",
         "category": "side",
-        "ingredients": ["ひじき", "にんじん", "大豆"]
+        "ingredients": ["ひじき", "にんじん", "大豆"],
+        "genre": "和食"
     },
     {
         "id": 106,
         "name": "かぼちゃの煮物",
         "category": "side",
-        "ingredients": ["かぼちゃ"]
+        "ingredients": ["かぼちゃ"],
+        "genre": "和食"
     },
     {
         "id": 107,
         "name": "春雨サラダ",
         "category": "side",
-        "ingredients": ["春雨", "きゅうり", "ハム"]
+        "ingredients": ["春雨", "きゅうり", "ハム"],
+        "genre": "中華"
     },
     {
         "id": 108,
         "name": "小松菜の胡麻和え",
         "category": "side",
-        "ingredients": ["小松菜", "ごま"]
+        "ingredients": ["小松菜", "ごま"],
+        "genre": "和食"
     },
     {
         "id": 109,
         "name": "ブロッコリーサラダ",
         "category": "side",
-        "ingredients": ["ブロッコリー", "ゆで卵"]
+        "ingredients": ["ブロッコリー", "ゆで卵"],
+        "genre": "洋食"
     },
     {
         "id": 110,
         "name": "もやしナムル",
         "category": "side",
-        "ingredients": ["もやし", "ごま"]
+        "ingredients": ["もやし", "ごま"],
+        "genre": "韓国"
     },
     {
         "id": 111,
         "name": "切り干し大根の煮物",
         "category": "side",
-        "ingredients": ["切り干し大根", "にんじん", "油揚げ"]
+        "ingredients": ["切り干し大根", "にんじん", "油揚げ"],
+        "genre": "和食"
     },
     {
         "id": 112,
         "name": "なすの煮びたし",
         "category": "side",
-        "ingredients": ["なす", "しょうが"]
+        "ingredients": ["なす", "しょうが"],
+        "genre": "和食"
     },
     {
         "id": 113,
         "name": "厚揚げの生姜焼き",
         "category": "side",
-        "ingredients": ["厚揚げ", "しょうが", "ねぎ"]
+        "ingredients": ["厚揚げ", "しょうが", "ねぎ"],
+        "genre": "和食"
     },
     {
         "id": 114,
         "name": "オクラのおかか和え",
         "category": "side",
-        "ingredients": ["オクラ", "かつお節"]
+        "ingredients": ["オクラ", "かつお節"],
+        "genre": "和食"
     },
     {
         "id": 115,
         "name": "冷奴",
         "category": "side",
-        "ingredients": ["豆腐", "ねぎ", "しょうが"]
+        "ingredients": ["豆腐", "ねぎ", "しょうが"],
+        "genre": "和食"
     },
     {
         "id": 116,
         "name": "ラタトゥイユ",
         "category": "side",
-        "ingredients": ["なす", "ズッキーニ", "パプリカ", "トマト"]
+        "ingredients": ["なす", "ズッキーニ", "パプリカ", "トマト"],
+        "genre": "洋食"
     },
     {
         "id": 117,
         "name": "キャロットラペ",
         "category": "side",
-        "ingredients": ["にんじん"]
+        "ingredients": ["にんじん"],
+        "genre": "洋食"
     },
     {
         "id": 118,
         "name": "カプレーゼ",
         "category": "side",
-        "ingredients": ["トマト", "モッツァレラチーズ", "バジル"]
+        "ingredients": ["トマト", "モッツァレラチーズ", "バジル"],
+        "genre": "洋食"
     },
     {
         "id": 119,
         "name": "コールスロー",
         "category": "side",
-        "ingredients": ["キャベツ", "にんじん", "コーン"]
+        "ingredients": ["キャベツ", "にんじん", "コーン"],
+        "genre": "洋食"
     },
     {
         "id": 120,
         "name": "ジャーマンポテト",
         "category": "side",
-        "ingredients": ["じゃがいも", "ベーコン", "玉ねぎ"]
+        "ingredients": ["じゃがいも", "ベーコン", "玉ねぎ"],
+        "genre": "洋食"
     },
     {
         "id": 121,
         "name": "青椒土豆絲",
         "category": "side",
-        "ingredients": ["じゃがいも", "ピーマン"]
+        "ingredients": ["じゃがいも", "ピーマン"],
+        "genre": "中華"
     },
     {
         "id": 122,
         "name": "棒棒鶏",
         "category": "side",
-        "ingredients": ["鶏むね肉", "きゅうり"]
+        "ingredients": ["鶏むね肉", "きゅうり"],
+        "genre": "中華"
     },
     {
         "id": 123,
         "name": "中華くらげ",
         "category": "side",
-        "ingredients": ["くらげ", "きゅうり"]
+        "ingredients": ["くらげ", "きゅうり"],
+        "genre": "中華"
     },
     {
         "id": 124,
         "name": "トマトと卵の炒め物",
         "category": "side",
-        "ingredients": ["トマト", "卵"]
+        "ingredients": ["トマト", "卵"],
+        "genre": "中華"
     },
     {
         "id": 125,
         "name": "ニラ玉",
         "category": "side",
-        "ingredients": ["ニラ", "卵"]
+        "ingredients": ["ニラ", "卵"],
+        "genre": "中華"
     },
     {
         "id": 126,
         "name": "チョレギサラダ",
         "category": "side",
-        "ingredients": ["レタス", "きゅうり", "韓国のり"]
+        "ingredients": ["レタス", "きゅうり", "韓国のり"],
+        "genre": "韓国"
     },
     {
         "id": 127,
         "name": "ほうれん草ナムル",
         "category": "side",
-        "ingredients": ["ほうれん草", "ごま"]
+        "ingredients": ["ほうれん草", "ごま"],
+        "genre": "韓国"
     },
     {
         "id": 128,
         "name": "キムチ豆腐",
         "category": "side",
-        "ingredients": ["豆腐", "キムチ", "ねぎ"]
+        "ingredients": ["豆腐", "キムチ", "ねぎ"],
+        "genre": "中華"
     },
     {
         "id": 129,
         "name": "れんこんサラダ",
         "category": "side",
-        "ingredients": ["れんこん", "きゅうり", "にんじん"]
+        "ingredients": ["れんこん", "きゅうり", "にんじん"],
+        "genre": "洋食"
     },
     {
         "id": 130,
         "name": "アボカドとトマトのサラダ",
         "category": "side",
-        "ingredients": ["アボカド", "トマト"]
+        "ingredients": ["アボカド", "トマト"],
+        "genre": "洋食"
     },
     {
         "id": 131,
         "name": "焼きなす",
         "category": "side",
-        "ingredients": ["なす", "しょうが", "かつお節"]
+        "ingredients": ["なす", "しょうが", "かつお節"],
+        "genre": "和食"
     },
     {
         "id": 132,
         "name": "きゅうりの浅漬け",
         "category": "side",
-        "ingredients": ["きゅうり"]
+        "ingredients": ["きゅうり"],
+        "genre": "和食"
     },
     {
         "id": 133,
         "name": "白菜の浅漬け",
         "category": "side",
-        "ingredients": ["白菜"]
+        "ingredients": ["白菜"],
+        "genre": "和食"
     },
     {
         "id": 134,
         "name": "もずく酢",
         "category": "side",
-        "ingredients": ["もずく"]
+        "ingredients": ["もずく"],
+        "genre": "和食"
     },
     {
         "id": 135,
         "name": "ひやしトマト",
         "category": "side",
-        "ingredients": ["トマト"]
+        "ingredients": ["トマト"],
+        "genre": "洋食"
     },
     {
         "id": 136,
         "name": "いんげんの胡麻和え",
         "category": "side",
-        "ingredients": ["いんげん", "ごま"]
+        "ingredients": ["いんげん", "ごま"],
+        "genre": "和食"
     },
     {
         "id": 137,
         "name": "ほうれん草とベーコンのソテー",
         "category": "side",
-        "ingredients": ["ほうれん草", "ベーコン"]
+        "ingredients": ["ほうれん草", "ベーコン"],
+        "genre": "洋食"
     },
     {
         "id": 138,
         "name": "きのこのソテー",
         "category": "side",
-        "ingredients": ["しめじ", "しいたけ", "えのき"]
+        "ingredients": ["しめじ", "しいたけ", "えのき"],
+        "genre": "洋食"
     },
     {
         "id": 139,
         "name": "アスパラベーコン",
         "category": "side",
-        "ingredients": ["アスパラガス", "ベーコン"]
+        "ingredients": ["アスパラガス", "ベーコン"],
+        "genre": "洋食"
     },
     {
         "id": 140,
         "name": "ジャーマンかぼちゃ",
         "category": "side",
-        "ingredients": ["かぼちゃ", "ベーコン", "玉ねぎ"]
+        "ingredients": ["かぼちゃ", "ベーコン", "玉ねぎ"],
+        "genre": "洋食"
     },
     {
         "id": 141,
         "name": "カリフラワーサラダ",
         "category": "side",
-        "ingredients": ["カリフラワー", "ゆで卵"]
+        "ingredients": ["カリフラワー", "ゆで卵"],
+        "genre": "洋食"
     },
     {
         "id": 142,
         "name": "ツナサラダ",
         "category": "side",
-        "ingredients": ["レタス", "きゅうり", "トマト", "ツナ"]
+        "ingredients": ["レタス", "きゅうり", "トマト", "ツナ"],
+        "genre": "洋食"
     },
     {
         "id": 143,
         "name": "ブロッコリーとツナのサラダ",
         "category": "side",
-        "ingredients": ["ブロッコリー", "ツナ"]
+        "ingredients": ["ブロッコリー", "ツナ"],
+        "genre": "洋食"
     },
     {
         "id": 144,
         "name": "コーンバター",
         "category": "side",
-        "ingredients": ["コーン", "バター"]
+        "ingredients": ["コーン", "バター"],
+        "genre": "洋食"
     },
     {
         "id": 145,
         "name": "きくらげと卵の炒め物",
         "category": "side",
-        "ingredients": ["きくらげ", "卵"]
+        "ingredients": ["きくらげ", "卵"],
+        "genre": "中華"
     },
     {
         "id": 146,
         "name": "ザーサイ",
         "category": "side",
-        "ingredients": ["ザーサイ"]
+        "ingredients": ["ザーサイ"],
+        "genre": "中華"
     },
     {
         "id": 147,
         "name": "きゅうりの中華和え",
         "category": "side",
-        "ingredients": ["きゅうり", "ごま"]
+        "ingredients": ["きゅうり", "ごま"],
+        "genre": "中華"
     },
     {
         "id": 148,
         "name": "白菜ナムル",
         "category": "side",
-        "ingredients": ["白菜", "ごま"]
+        "ingredients": ["白菜", "ごま"],
+        "genre": "韓国"
     },
     {
         "id": 149,
         "name": "豆苗炒め",
         "category": "side",
-        "ingredients": ["豆苗", "にんにく"]
+        "ingredients": ["豆苗", "にんにく"],
+        "genre": "中華"
     },
     {
         "id": 150,
         "name": "韓国風きゅうりサラダ",
         "category": "side",
-        "ingredients": ["きゅうり", "キムチ", "ごま"]
+        "ingredients": ["きゅうり", "キムチ", "ごま"],
+        "genre": "韓国"
     }, 
     {
         "id": 201,
         "name": "味噌汁",
         "category": "soup",
-        "ingredients": ["豆腐", "わかめ", "長ねぎ", "味噌"]
+        "ingredients": ["豆腐", "わかめ", "長ねぎ", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 202,
         "name": "豚汁",
         "category": "soup",
-        "ingredients": ["豚肉", "大根", "にんじん", "ごぼう", "こんにゃく", "長ねぎ", "味噌"]
+        "ingredients": ["豚肉", "大根", "にんじん", "ごぼう", "こんにゃく", "長ねぎ", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 203,
         "name": "けんちん汁",
         "category": "soup",
-        "ingredients": ["大根", "にんじん", "ごぼう", "豆腐", "こんにゃく", "長ねぎ"]
+        "ingredients": ["大根", "にんじん", "ごぼう", "豆腐", "こんにゃく", "長ねぎ"],
+        "genre": "和食"
     },
     {
         "id": 204,
         "name": "かきたま汁",
         "category": "soup",
-        "ingredients": ["卵", "長ねぎ", "片栗粉"]
+        "ingredients": ["卵", "長ねぎ", "片栗粉"],
+        "genre": "和食"
     },
     {
         "id": 205,
         "name": "わかめスープ",
         "category": "soup",
-        "ingredients": ["わかめ", "長ねぎ", "ごま"]
+        "ingredients": ["わかめ", "長ねぎ", "ごま"],
+        "genre": "中華"
     },
     {
         "id": 206,
         "name": "コーンスープ",
         "category": "soup",
-        "ingredients": ["コーン", "牛乳", "玉ねぎ", "バター"]
+        "ingredients": ["コーン", "牛乳", "玉ねぎ", "バター"],
+        "genre": "洋食"
     },
     {
         "id": 207,
         "name": "ミネストローネ",
         "category": "soup",
-        "ingredients": ["トマト", "玉ねぎ", "にんじん", "じゃがいも", "キャベツ"]
+        "ingredients": ["トマト", "玉ねぎ", "にんじん", "じゃがいも", "キャベツ"],
+        "genre": "洋食"
     },
     {
         "id": 208,
         "name": "オニオンスープ",
         "category": "soup",
-        "ingredients": ["玉ねぎ", "バター", "コンソメ"]
+        "ingredients": ["玉ねぎ", "バター", "コンソメ"],
+        "genre": "洋食"
     },
     {
         "id": 209,
         "name": "中華スープ",
         "category": "soup",
-        "ingredients": ["卵", "長ねぎ", "ごま", "鶏がらスープの素"]
+        "ingredients": ["卵", "長ねぎ", "ごま", "鶏がらスープの素"],
+        "genre": "中華"
     },
     {
         "id": 210,
         "name": "クラムチャウダー",
         "category": "soup",
-        "ingredients": ["あさり", "じゃがいも", "玉ねぎ", "にんじん", "牛乳", "バター"]
+        "ingredients": ["あさり", "じゃがいも", "玉ねぎ", "にんじん", "牛乳", "バター"],
+        "genre": "洋食"
     },
     {
         "id": 211,
         "name": "豆腐と油揚げの味噌汁",
         "category": "soup",
-        "ingredients": ["豆腐", "油揚げ", "味噌"]
+        "ingredients": ["豆腐", "油揚げ", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 212,
         "name": "なめこの味噌汁",
         "category": "soup",
-        "ingredients": ["なめこ", "豆腐", "味噌"]
+        "ingredients": ["なめこ", "豆腐", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 213,
         "name": "しじみの味噌汁",
         "category": "soup",
-        "ingredients": ["しじみ", "味噌"]
+        "ingredients": ["しじみ", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 214,
         "name": "あさりの味噌汁",
         "category": "soup",
-        "ingredients": ["あさり", "長ねぎ", "味噌"]
+        "ingredients": ["あさり", "長ねぎ", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 215,
         "name": "キャベツの味噌汁",
         "category": "soup",
-        "ingredients": ["キャベツ", "油揚げ", "味噌"]
+        "ingredients": ["キャベツ", "油揚げ", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 216,
         "name": "じゃがいもの味噌汁",
         "category": "soup",
-        "ingredients": ["じゃがいも", "玉ねぎ", "味噌"]
+        "ingredients": ["じゃがいも", "玉ねぎ", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 217,
         "name": "ほうれん草の味噌汁",
         "category": "soup",
-        "ingredients": ["ほうれん草", "豆腐", "味噌"]
+        "ingredients": ["ほうれん草", "豆腐", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 218,
         "name": "白菜の味噌汁",
         "category": "soup",
-        "ingredients": ["白菜", "油揚げ", "味噌"]
+        "ingredients": ["白菜", "油揚げ", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 219,
         "name": "大根の味噌汁",
         "category": "soup",
-        "ingredients": ["大根", "油揚げ", "味噌"]
+        "ingredients": ["大根", "油揚げ", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 220,
         "name": "小松菜の味噌汁",
         "category": "soup",
-        "ingredients": ["小松菜", "豆腐", "味噌"]
+        "ingredients": ["小松菜", "豆腐", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 221,
         "name": "なすの味噌汁",
         "category": "soup",
-        "ingredients": ["なす", "油揚げ", "味噌"]
+        "ingredients": ["なす", "油揚げ", "味噌"],
+        "genre": "和食"
     },
     {
         "id": 222,
         "name": "きのこスープ",
         "category": "soup",
-        "ingredients": ["しめじ", "えのき", "しいたけ", "コンソメ"]
+        "ingredients": ["しめじ", "えのき", "しいたけ", "コンソメ"],
+        "genre": "洋食"
     },
     {
         "id": 223,
         "name": "野菜スープ",
         "category": "soup",
-        "ingredients": ["キャベツ", "玉ねぎ", "にんじん", "じゃがいも", "コンソメ"]
+        "ingredients": ["キャベツ", "玉ねぎ", "にんじん", "じゃがいも", "コンソメ"],
+        "genre": "洋食"
     },
     {
         "id": 224,
         "name": "白菜とベーコンのスープ",
         "category": "soup",
-        "ingredients": ["白菜", "ベーコン", "コンソメ"]
+        "ingredients": ["白菜", "ベーコン", "コンソメ"],
+        "genre": "洋食"
     },
     {
         "id": 225,
         "name": "キャベツとウインナーのスープ",
         "category": "soup",
-        "ingredients": ["キャベツ", "ウインナー", "コンソメ"]
+        "ingredients": ["キャベツ", "ウインナー", "コンソメ"],
+        "genre": "洋食"
     },
     {
         "id": 226,
         "name": "トマトスープ",
         "category": "soup",
-        "ingredients": ["トマト", "玉ねぎ", "コンソメ"]
+        "ingredients": ["トマト", "玉ねぎ", "コンソメ"],
+        "genre": "洋食"
     },
     {
         "id": 227,
         "name": "かぼちゃスープ",
         "category": "soup",
-        "ingredients": ["かぼちゃ", "牛乳", "バター"]
+        "ingredients": ["かぼちゃ", "牛乳", "バター"],
+        "genre": "洋食"
     },
     {
         "id": 228,
         "name": "じゃがいものポタージュ",
         "category": "soup",
-        "ingredients": ["じゃがいも", "玉ねぎ", "牛乳", "バター"]
+        "ingredients": ["じゃがいも", "玉ねぎ", "牛乳", "バター"],
+        "genre": "洋食"
     },
     {
         "id": 229,
         "name": "にんじんポタージュ",
         "category": "soup",
-        "ingredients": ["にんじん", "玉ねぎ", "牛乳", "バター"]
+        "ingredients": ["にんじん", "玉ねぎ", "牛乳", "バター"],
+        "genre": "洋食"
     },
     {
         "id": 230,
         "name": "ブロッコリーポタージュ",
         "category": "soup",
-        "ingredients": ["ブロッコリー", "玉ねぎ", "牛乳"]
+        "ingredients": ["ブロッコリー", "玉ねぎ", "牛乳"],
+        "genre": "洋食"
     },
     {
         "id": 231,
         "name": "かぼちゃとベーコンのスープ",
         "category": "soup",
-        "ingredients": ["かぼちゃ", "ベーコン", "牛乳"]
+        "ingredients": ["かぼちゃ", "ベーコン", "牛乳"],
+        "genre": "洋食"
     },
     {
         "id": 232,
         "name": "卵スープ",
         "category": "soup",
-        "ingredients": ["卵", "鶏がらスープの素", "長ねぎ"]
+        "ingredients": ["卵", "鶏がらスープの素", "長ねぎ"],
+        "genre": "中華"
     },
     {
         "id": 233,
         "name": "もやしスープ",
         "category": "soup",
-        "ingredients": ["もやし", "長ねぎ", "鶏がらスープの素"]
+        "ingredients": ["もやし", "長ねぎ", "鶏がらスープの素"],
+        "genre": "中華"
     },
     {
         "id": 234,
         "name": "豆腐とニラのスープ",
         "category": "soup",
-        "ingredients": ["豆腐", "ニラ", "鶏がらスープの素"]
+        "ingredients": ["豆腐", "ニラ", "鶏がらスープの素"],
+        "genre": "中華"
     },
     {
         "id": 235,
         "name": "トマトと卵の中華スープ",
         "category": "soup",
-        "ingredients": ["トマト", "卵", "鶏がらスープの素"]
+        "ingredients": ["トマト", "卵", "鶏がらスープの素"],
+        "genre": "中華"
     },
     {
         "id": 236,
         "name": "春雨スープ",
         "category": "soup",
-        "ingredients": ["春雨", "長ねぎ", "鶏がらスープの素"]
+        "ingredients": ["春雨", "長ねぎ", "鶏がらスープの素"],
+        "genre": "中華"
     },
     {
         "id": 237,
         "name": "チンゲン菜の中華スープ",
         "category": "soup",
-        "ingredients": ["チンゲン菜", "卵", "鶏がらスープの素"]
+        "ingredients": ["チンゲン菜", "卵", "鶏がらスープの素"],
+        "genre": "中華"
     },
     {
         "id": 238,
         "name": "わかめと豆腐の中華スープ",
         "category": "soup",
-        "ingredients": ["わかめ", "豆腐", "鶏がらスープの素"]
+        "ingredients": ["わかめ", "豆腐", "鶏がらスープの素"],
+        "genre": "中華"
     },
     {
         "id": 239,
         "name": "酸辣湯",
         "category": "soup",
-        "ingredients": ["豆腐", "卵", "しいたけ", "たけのこ", "片栗粉"]
+        "ingredients": ["豆腐", "卵", "しいたけ", "たけのこ", "片栗粉"],
+        "genre": "中華"
     },
     {
         "id": 240,
         "name": "ユッケジャンスープ",
         "category": "soup",
-        "ingredients": ["牛肉", "もやし", "長ねぎ", "ニラ"]
+        "ingredients": ["牛肉", "もやし", "長ねぎ", "ニラ"],
+        "genre": "韓国"
     },
     {
         "id": 241,
         "name": "トックスープ",
         "category": "soup",
-        "ingredients": ["トック", "卵", "長ねぎ"]
+        "ingredients": ["トック", "卵", "長ねぎ"],
+        "genre": "韓国"
     },
     {
         "id": 242,
         "name": "サムゲタンスープ",
         "category": "soup",
-        "ingredients": ["鶏肉", "長ねぎ", "しょうが"]
+        "ingredients": ["鶏肉", "長ねぎ", "しょうが"],
+        "genre": "韓国"
     },
     {
         "id": 243,
         "name": "ビシソワーズ",
         "category": "soup",
-        "ingredients": ["じゃがいも", "玉ねぎ", "牛乳"]
+        "ingredients": ["じゃがいも", "玉ねぎ", "牛乳"],
+        "genre": "洋食"
     },
     {
         "id": 244,
         "name": "パンプキンポタージュ",
         "category": "soup",
-        "ingredients": ["かぼちゃ", "牛乳", "バター"]
+        "ingredients": ["かぼちゃ", "牛乳", "バター"],
+        "genre": "洋食"
     },
     {
         "id": 245,
         "name": "マッシュルームスープ",
         "category": "soup",
-        "ingredients": ["マッシュルーム", "玉ねぎ", "牛乳"]
+        "ingredients": ["マッシュルーム", "玉ねぎ", "牛乳"],
+        "genre": "洋食"
     },
     {
         "id": 246,
         "name": "ブロッコリーとベーコンのスープ",
         "category": "soup",
-        "ingredients": ["ブロッコリー", "ベーコン", "コンソメ"]
+        "ingredients": ["ブロッコリー", "ベーコン", "コンソメ"],
+        "genre": "洋食"
     },
     {
         "id": 247,
         "name": "レタススープ",
         "category": "soup",
-        "ingredients": ["レタス", "卵", "コンソメ"]
+        "ingredients": ["レタス", "卵", "コンソメ"],
+        "genre": "洋食"
     },
     {
         "id": 248,
         "name": "ズッキーニのスープ",
         "category": "soup",
-        "ingredients": ["ズッキーニ", "玉ねぎ", "コンソメ"]
+        "ingredients": ["ズッキーニ", "玉ねぎ", "コンソメ"],
+        "genre": "洋食"
     },
     {
         "id": 249,
         "name": "トマトとキャベツのスープ",
         "category": "soup",
-        "ingredients": ["トマト", "キャベツ", "玉ねぎ", "コンソメ"]
+        "ingredients": ["トマト", "キャベツ", "玉ねぎ", "コンソメ"],
+        "genre": "洋食"
     },
     {
         "id": 250,
         "name": "ほうれん草とベーコンのスープ",
         "category": "soup",
-        "ingredients": ["ほうれん草", "ベーコン", "コンソメ"]
+        "ingredients": ["ほうれん草", "ベーコン", "コンソメ"],
+        "genre": "洋食"
     }
 ]
