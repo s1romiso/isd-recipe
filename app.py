@@ -13,15 +13,30 @@ def index():
     selected_menu_type = "all"
 
     if request.method == "POST":
-        user_input_text = request.form.get("ingredients", "").strip()
+        input_ingredients = request.form.get("ingredients", "").strip()
+        selected_menu_type = request.form.get("menu_type", "all")
 
-        if not user_input_text:
+        if not input_ingredients:
             error_message = "食材を入力してください。"
         else:
-            user_input = user_input_text.split()
-            suggested_menu = select_menu(user_input, recipes)
+            user_input = input_ingredients.split()
+            all_results = select_menu(user_input, recipes)
 
-            if not suggested_menu:
+            # 選択された種類だけを残す
+            if selected_menu_type == "all":
+                suggested_menu = all_results
+            else:
+                suggested_menu = {
+                    "main": [],
+                    "side": [],
+                    "soup": []
+                }
+
+                suggested_menu[selected_menu_type] = all_results[selected_menu_type]
+
+            # 辞書の中のリストがすべて空か確認
+            if not any(suggested_menu.values()):
+                suggested_menu = None
                 error_message = "該当する料理が見つかりませんでした。"
 
     return render_template(
