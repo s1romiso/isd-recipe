@@ -10,19 +10,27 @@ def index():
     suggested_menu = None
     error_message = None
     input_ingredients = ""
-    selected_menu_type = "all"
+    selected_menu_type = "main"
 
     if request.method == "POST":
-        user_input_text = request.form.get("ingredients", "").strip()
+        input_ingredients = request.form.get("ingredients", "").strip()
+        selected_menu_type = request.form.get("menu_type", "main")
 
-        if not user_input_text:
+        if not input_ingredients:
             error_message = "食材を入力してください。"
         else:
-            user_input = user_input_text.split()
-            suggested_menu = select_menu(user_input, recipes)
+            user_input = input_ingredients.split()
+
+            suggested_menu = select_menu(
+                user_input,
+                recipes,
+                selected_menu_type
+            )
 
             if not suggested_menu:
-                error_message = "該当する料理が見つかりませんでした。"
+                error_message = (
+                    "入力食材に合う料理が見つかりませんでした。"
+                )
 
     return render_template(
         "index.html",
