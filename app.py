@@ -9,31 +9,33 @@ app = Flask(__name__)
 def index():
     suggested_menu = None
     error_message = None
+    input_ingredients = ""
+    selected_menu_type = "all"
 
     if request.method == "POST":
-        user_input = request.form.get("ingredients", "")
-        menu_type = request.form.get("menu_type", "all")
+        user_input_text = request.form.get("ingredients", "").strip()
 
-        if not user_input.strip():
+        if not user_input_text:
             error_message = "食材を入力してください。"
         else:
-            user_ingredients = user_input.split()
-            all_results = select_menu(user_ingredients, recipes)
+            user_input = user_input_text.split()
+            suggested_menu = select_menu(user_input, recipes)
 
-            if menu_type == "all":
-                suggested_menu = all_results
-            else:
-                suggested_menu = {
-                    "main": [],
-                    "side": [],
-                    "soup": []
-                }
-                suggested_menu[menu_type] = all_results[menu_type]
+            suggested_menu = select_menu(
+                user_ingredients,
+                recipes,
+                selected_menu_type
+            )
+
+            if not suggested_menu:
+                error_message = "該当する料理が見つかりませんでした。"
 
     return render_template(
         "index.html",
         suggested_menu=suggested_menu,
-        error_message=error_message
+        error_message=error_message,
+        input_ingredients=input_ingredients,
+        selected_menu_type=selected_menu_type
     )
 
 
