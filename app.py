@@ -21,12 +21,6 @@ def index():
             user_input = user_input_text.split()
             suggested_menu = select_menu(user_input, recipes)
 
-            suggested_menu = select_menu(
-                user_ingredients,
-                recipes,
-                selected_menu_type
-            )
-
             if not suggested_menu:
                 error_message = "該当する料理が見つかりませんでした。"
 
