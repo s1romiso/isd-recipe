@@ -376,6 +376,20 @@ recipes = [
         "genre": "western"
     },
     {
+        "id": 51,
+        "name": "鮭の塩焼き",
+        "category": "main",
+        "ingredients": ["鮭", "塩"],
+        "genre": "japanese"
+    },
+    {
+        "id": 52,
+        "name": "手羽先と大根のさっぱり煮",
+        "category": "main",
+        "ingredients": ["鶏手羽先", "大根"],
+        "genre": "japanese"
+    },
+    {
         "id": 101,
         "name": "ポテトサラダ",
         "category": "side",
@@ -384,7 +398,7 @@ recipes = [
     },
     {
         "id": 102,
-        "name": "ほうれん草のおひたし",
+        "name": "ほうれん草のお浸し",
         "category": "side",
         "ingredients": ["ほうれん草", "かつお節"],
         "genre": "japanese"
