@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from cocona.categoryver import select_menu
+from cocona.deta import select_menu
 from data.data import recipes
 
 app = Flask(__name__)
@@ -28,7 +28,9 @@ def index():
             )
 
             if not suggested_menu:
-                error_message = "該当する料理が見つかりませんでした。"
+                error_message = (
+                    "入力食材に合う料理が見つかりませんでした。"
+                )
 
     return render_template(
         "index.html",

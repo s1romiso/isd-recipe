@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>献立提案システム</title>
-    <link
-        rel="stylesheet"
-        href="{{ url_for('static', filename='style.css') }}"
-    >
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
@@ -15,6 +12,7 @@
         <h1>献立提案システム</h1>
 
         <form method="POST">
+
             <label for="ingredients">
                 食材名をスペース区切りで入力してください
             </label>
@@ -24,96 +22,114 @@
                 type="text"
                 name="ingredients"
                 placeholder="例：豚肉 玉ねぎ にんじん"
-                value="{{ input_ingredients | default('') }}"
+                value="{{ input_ingredients }}"
                 required
             >
 
             <label for="menu_type">
-                入力食材を使用したい料理の種類
+                入力食材を使用したい料理の種類を選択してください
             </label>
 
             <select id="menu_type" name="menu_type">
-                <option value="main">主菜</option>
-                <option value="side">副菜</option>
-                <option value="soup">汁物</option>
+
+                <option value="main"
+                    {% if selected_menu_type == "main" %}selected{% endif %}>
+                    主菜
+                </option>
+
+                <option value="side"
+                    {% if selected_menu_type == "side" %}selected{% endif %}>
+                    副菜
+                </option>
+
+                <option value="soup"
+                    {% if selected_menu_type == "soup" %}selected{% endif %}>
+                    汁物
+                </option>
+
             </select>
 
-            <button type="submit">献立を提案する</button>
+            <button type="submit">
+                献立を提案する
+            </button>
+
         </form>
 
         {% if error_message %}
-            <p class="error">{{ error_message }}</p>
+            <p class="error">
+                {{ error_message }}
+            </p>
         {% endif %}
 
         {% if suggested_menu %}
+
             <h2>おすすめ献立</h2>
 
-            <div class="result">
-                <h3>主菜</h3>
+            <div class="menu-list">
 
-                {% if suggested_menu.main %}
-                    <ol>
-                        {% for menu in suggested_menu.main %}
-                            <li>
-                                <a
-                                    href="https://cookpad.com/search/{{ menu | urlencode }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {{ menu }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ol>
-                {% else %}
-                    <p>該当する料理が見つかりませんでした。</p>
-                {% endif %}
+                {% for menu_set in suggested_menu %}
+
+                <div class="result">
+
+                    <h3>献立{{ loop.index }}</h3>
+
+                    <div class="menu-item">
+                        <strong>主菜：</strong>
+
+                        {% if menu_set.main != "該当なし" %}
+                            <a
+                                href="https://cookpad.com/search/{{ menu_set.main | replace('(食材外)', '') | urlencode }}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {{ menu_set.main }}
+                            </a>
+                        {% else %}
+                            該当なし
+                        {% endif %}
+                    </div>
+
+                    <div class="menu-item">
+                        <strong>副菜：</strong>
+
+                        {% if menu_set.side != "該当なし" %}
+                            <a
+                                href="https://cookpad.com/search/{{ menu_set.side | replace('(食材外)', '') | urlencode }}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {{ menu_set.side }}
+                            </a>
+                        {% else %}
+                            該当なし
+                        {% endif %}
+                    </div>
+
+                    <div class="menu-item">
+                        <strong>汁物：</strong>
+
+                        {% if menu_set.soup != "該当なし" %}
+                            <a
+                                href="https://cookpad.com/search/{{ menu_set.soup | replace('(食材外)', '') | urlencode }}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {{ menu_set.soup }}
+                            </a>
+                        {% else %}
+                            該当なし
+                        {% endif %}
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
             </div>
 
-            <div class="result">
-                <h3>副菜</h3>
-
-                {% if suggested_menu.side %}
-                    <ol>
-                        {% for menu in suggested_menu.side %}
-                            <li>
-                                <a
-                                    href="https://cookpad.com/search/{{ menu | urlencode }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {{ menu }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ol>
-                {% else %}
-                    <p>該当する料理が見つかりませんでした。</p>
-                {% endif %}
-            </div>
-
-            <div class="result">
-                <h3>汁物</h3>
-
-                {% if suggested_menu.soup %}
-                    <ol>
-                        {% for menu in suggested_menu.soup %}
-                            <li>
-                                <a
-                                    href="https://cookpad.com/search/{{ menu | urlencode }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {{ menu }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ol>
-                {% else %}
-                    <p>該当する料理が見つかりませんでした。</p>
-                {% endif %}
-            </div>
         {% endif %}
+
     </div>
+
 </body>
 </html>
