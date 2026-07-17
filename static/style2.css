@@ -259,8 +259,10 @@ input[type="text"]:focus {
 }
 
 .outside-label {
-    color: #9b8572;
+    display: block;
+    margin-top: 4px;
     font-size: 12px;
+    color: #888;
 }
 
 .recipe-link {
