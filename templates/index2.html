@@ -49,7 +49,7 @@
 
         <div class="hero-image">
             <img
-                src="{{ url_for('static', filename='images/meal.jpg') }}"
+                src="{{ url_for('static', filename='../images/meal.jpg') }}"
                 alt="主菜、副菜、汁物がそろった献立"
             >
         </div>
@@ -257,7 +257,7 @@
                     type="submit"
                     class="submit-button"
                 >
-                    <span aria-hidden="true">🍲</span>
+                    <span aria-hidden="true"></span>
                     献立を提案する
                 </button>
 
@@ -359,7 +359,7 @@
                                             {% if "(食材外)" in menu_set.main %}
 
                                                 <span class="outside-label">
-                                                    (入力食材以外を使用)
+                                                    入力食材以外を使用
                                                 </span>
 
                                             {% endif %}
@@ -479,17 +479,10 @@
 
             <div class="guide-heading">
 
-                <span
-                    class="guide-icon"
-                    aria-hidden="true"
-                >
-                    💡
-                </span>
-
                 <div>
 
                     <h2>
-                        使い方のポイント
+                        💡使い方のポイント
                     </h2>
                 </div>
 
@@ -499,13 +492,10 @@
 
                 <div class="guide-item">
 
-                    <span class="guide-number">
-                        1
-                    </span>
 
                     <div>
                         <h3>
-                            食材を入力
+                            1 食材を入力
                         </h3>
 
                         <p>
@@ -518,13 +508,9 @@
 
                 <div class="guide-item">
 
-                    <span class="guide-number">
-                        2
-                    </span>
-
                     <div>
                         <h3>
-                            料理の種類を選択
+                            2 料理の種類を選択
                         </h3>
 
                         <p>
@@ -537,13 +523,9 @@
 
                 <div class="guide-item">
 
-                    <span class="guide-number">
-                        3
-                    </span>
-
                     <div>
                         <h3>
-                            献立を確認
+                            3 献立を確認
                         </h3>
 
                         <p>
@@ -557,7 +539,7 @@
 
             <p class="outside-explanation">
                 「入力食材以外を使用」と表示された料理には、
-                入力していない食材も必要です。
+                入力食材は含まれていません。
             </p>
 
         </section>
