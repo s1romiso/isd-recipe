@@ -33,7 +33,7 @@ def index():
                 )
 
     return render_template(
-        "index.html",
+        "index2.html",
         suggested_menu=suggested_menu,
         error_message=error_message,
         input_ingredients=input_ingredients,

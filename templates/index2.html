@@ -1,0 +1,617 @@
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="冷蔵庫にある食材から、主菜・副菜・汁物を組み合わせた献立を提案します。"
+    >
+
+    <title>今日の献立｜献立提案システム</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style2.css') }}"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         メインビジュアル
+    ========================== -->
+    <header class="hero">
+
+        <div class="hero-text">
+
+            <p class="site-name">
+                <span class="site-icon" aria-hidden="true">🍲</span>
+                献立提案システム
+            </p>
+
+            <h1>
+                今日の<span>献立</span>、<br>
+                おまかせください。
+            </h1>
+
+            <p class="hero-description">
+                冷蔵庫にある食材から、主菜・副菜・汁物を組み合わせた
+                おすすめの献立を提案します。
+            </p>
+
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="{{ url_for('static', filename='images/meal.jpg') }}"
+                alt="主菜、副菜、汁物がそろった献立"
+            >
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             食材入力フォーム
+        ========================== -->
+        <section class="search-panel">
+
+            <form method="POST" action="{{ url_for('index') }}">
+
+                <div class="form-grid">
+
+                    <!-- 食材入力 -->
+                    <div class="ingredient-area">
+
+                        <div class="form-heading">
+
+                            <span
+                                class="heading-icon"
+                                aria-hidden="true"
+                            >
+                                🥕
+                            </span>
+
+                            <div>
+                                <p class="heading-number">
+                                    STEP 1
+                                </p>
+
+                                <h2>
+                                    食材を入力
+                                </h2>
+                            </div>
+
+                        </div>
+
+                        <label
+                            for="ingredients"
+                            class="form-label"
+                        >
+                            使用したい食材をスペース区切りで入力してください
+                        </label>
+
+                        <input
+                            id="ingredients"
+                            type="text"
+                            name="ingredients"
+                            placeholder="例：豚肉 玉ねぎ にんじん"
+                            value="{{ input_ingredients }}"
+                            autocomplete="off"
+                            required
+                        >
+
+                        <div
+                            class="examples"
+                            aria-label="食材の入力例"
+                        >
+                            <span class="example-title">
+                                入力例
+                            </span>
+
+                            <span>豚肉</span>
+                            <span>玉ねぎ</span>
+                            <span>にんじん</span>
+                            <span>じゃがいも</span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- 料理カテゴリ選択 -->
+                    <div class="category-area">
+
+                        <div class="form-heading">
+
+                            <span
+                                class="heading-icon"
+                                aria-hidden="true"
+                            >
+                                🍴
+                            </span>
+
+                            <div>
+                                <p class="heading-number">
+                                    STEP 2
+                                </p>
+
+                                <h2>
+                                    料理の種類を選択
+                                </h2>
+                            </div>
+
+                        </div>
+
+                        <p class="form-label">
+                            入力した食材を使用したい料理を選んでください
+                        </p>
+
+                        <div class="category-options">
+
+                            <!-- 主菜 -->
+                            <label class="category-card">
+
+                                <input
+                                    type="radio"
+                                    name="menu_type"
+                                    value="main"
+                                    {% if selected_menu_type == "main" %}
+                                        checked
+                                    {% endif %}
+                                >
+
+                                <span
+                                    class="radio-mark"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span
+                                    class="category-icon"
+                                    aria-hidden="true"
+                                >
+                                    🍖
+                                </span>
+
+                                <span class="category-name">
+                                    主菜
+                                </span>
+
+                                <span class="category-description">
+                                    肉・魚など
+                                </span>
+
+                            </label>
+
+
+                            <!-- 副菜 -->
+                            <label class="category-card">
+
+                                <input
+                                    type="radio"
+                                    name="menu_type"
+                                    value="side"
+                                    {% if selected_menu_type == "side" %}
+                                        checked
+                                    {% endif %}
+                                >
+
+                                <span
+                                    class="radio-mark"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span
+                                    class="category-icon"
+                                    aria-hidden="true"
+                                >
+                                    🥗
+                                </span>
+
+                                <span class="category-name">
+                                    副菜
+                                </span>
+
+                                <span class="category-description">
+                                    野菜のおかず
+                                </span>
+
+                            </label>
+
+
+                            <!-- 汁物 -->
+                            <label class="category-card">
+
+                                <input
+                                    type="radio"
+                                    name="menu_type"
+                                    value="soup"
+                                    {% if selected_menu_type == "soup" %}
+                                        checked
+                                    {% endif %}
+                                >
+
+                                <span
+                                    class="radio-mark"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <span
+                                    class="category-icon"
+                                    aria-hidden="true"
+                                >
+                                    🥣
+                                </span>
+
+                                <span class="category-name">
+                                    汁物
+                                </span>
+
+                                <span class="category-description">
+                                    スープ・みそ汁
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    <span aria-hidden="true">🍲</span>
+                    献立を提案する
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- =========================
+             エラーメッセージ
+        ========================== -->
+        {% if error_message %}
+
+            <div
+                class="error"
+                role="alert"
+            >
+                <span
+                    class="error-icon"
+                    aria-hidden="true"
+                >
+                    !
+                </span>
+
+                <p>
+                    {{ error_message }}
+                </p>
+            </div>
+
+        {% endif %}
+
+
+        <!-- =========================
+             献立提案結果
+        ========================== -->
+        {% if suggested_menu %}
+
+            <section class="result-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="section-subtitle">
+                            MENU SUGGESTIONS
+                        </p>
+
+                        <h2 class="section-title">
+                            <span aria-hidden="true">🍽️</span>
+                            おすすめ献立
+                        </h2>
+
+                    </div>
+
+                    <p class="result-description">
+                        選択した料理を中心に、同じジャンルの料理を組み合わせています。
+                    </p>
+
+                </div>
+
+
+                <div class="menu-grid">
+
+                    {% for menu_set in suggested_menu %}
+
+                        <article class="menu-card">
+
+                            <div class="menu-card-header">
+
+                                <span class="menu-number">
+                                    {{ loop.index }}
+                                </span>
+
+                                <div>
+                                    <p class="menu-small-title">
+                                        おすすめ
+                                    </p>
+
+                                    <h3>
+                                        献立 {{ loop.index }}
+                                    </h3>
+                                </div>
+
+                            </div>
+
+
+                            <div class="dish-list">
+
+                                <!-- 主菜 -->
+                                <div class="dish-row">
+
+                                    <div class="dish-category main-label">
+                                        主菜
+                                    </div>
+
+                                    <div class="dish-information">
+
+                                        {% if menu_set.main != "該当なし" %}
+
+                                            <a
+                                                class="dish-name"
+                                                href="https://cookpad.com/search/{{ menu_set.main | replace('(食材外)', '') | urlencode }}"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {{ menu_set.main | replace('(食材外)', '') }}
+                                            </a>
+
+                                            {% if "(食材外)" in menu_set.main %}
+
+                                                <span class="outside-label">
+                                                    入力食材以外を使用
+                                                </span>
+
+                                            {% endif %}
+
+                                        {% else %}
+
+                                            <p class="dish-name unavailable">
+                                                該当なし
+                                            </p>
+
+                                        {% endif %}
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- 副菜 -->
+                                <div class="dish-row">
+
+                                    <div class="dish-category side-label">
+                                        副菜
+                                    </div>
+
+                                    <div class="dish-information">
+
+                                        {% if menu_set.side != "該当なし" %}
+
+                                            <a
+                                                class="dish-name"
+                                                href="https://cookpad.com/search/{{ menu_set.side | replace('(食材外)', '') | urlencode }}"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {{ menu_set.side | replace('(食材外)', '') }}
+                                            </a>
+
+                                            {% if "(食材外)" in menu_set.side %}
+
+                                                <span class="outside-label">
+                                                    入力食材以外を使用
+                                                </span>
+
+                                            {% endif %}
+
+                                        {% else %}
+
+                                            <p class="dish-name unavailable">
+                                                該当なし
+                                            </p>
+
+                                        {% endif %}
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- 汁物 -->
+                                <div class="dish-row">
+
+                                    <div class="dish-category soup-label">
+                                        汁物
+                                    </div>
+
+                                    <div class="dish-information">
+
+                                        {% if menu_set.soup != "該当なし" %}
+
+                                            <a
+                                                class="dish-name"
+                                                href="https://cookpad.com/search/{{ menu_set.soup | replace('(食材外)', '') | urlencode }}"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {{ menu_set.soup | replace('(食材外)', '') }}
+                                            </a>
+
+                                            {% if "(食材外)" in menu_set.soup %}
+
+                                                <span class="outside-label">
+                                                    入力食材以外を使用
+                                                </span>
+
+                                            {% endif %}
+
+                                        {% else %}
+
+                                            <p class="dish-name unavailable">
+                                                該当なし
+                                            </p>
+
+                                        {% endif %}
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="card-note">
+                                料理名をクリックすると、Cookpadの検索結果を表示します。
+                            </p>
+
+                        </article>
+
+                    {% endfor %}
+
+                </div>
+
+            </section>
+
+        {% endif %}
+
+
+        <!-- =========================
+             使い方
+        ========================== -->
+        <section class="guide-section">
+
+            <div class="guide-heading">
+
+                <span
+                    class="guide-icon"
+                    aria-hidden="true"
+                >
+                    💡
+                </span>
+
+                <div>
+                    <p class="section-subtitle">
+                        HOW TO USE
+                    </p>
+
+                    <h2>
+                        使い方のポイント
+                    </h2>
+                </div>
+
+            </div>
+
+            <div class="guide-list">
+
+                <div class="guide-item">
+
+                    <span class="guide-number">
+                        1
+                    </span>
+
+                    <div>
+                        <h3>
+                            食材を入力
+                        </h3>
+
+                        <p>
+                            使用したい食材を、スペースで区切って入力してください。
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="guide-item">
+
+                    <span class="guide-number">
+                        2
+                    </span>
+
+                    <div>
+                        <h3>
+                            料理の種類を選択
+                        </h3>
+
+                        <p>
+                            入力した食材を主菜・副菜・汁物のどれに使用するか選択します。
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="guide-item">
+
+                    <span class="guide-number">
+                        3
+                    </span>
+
+                    <div>
+                        <h3>
+                            献立を確認
+                        </h3>
+
+                        <p>
+                            選択した料理と同じジャンルから、最大3種類の献立を提案します。
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="outside-explanation">
+                「入力食材以外を使用」と表示された料理には、
+                入力していない食材も必要です。
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         フッター
+    ========================== -->
+    <footer class="footer">
+
+        <p>
+            献立提案システム
+        </p>
+
+        <p class="footer-description">
+            冷蔵庫にある食材から、毎日の献立づくりをお手伝いします。
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
