@@ -290,6 +290,149 @@ input[type="text"]:focus {
     color: #bc4135;
 }
 
+/* =========================
+   使い方のポイント
+========================= */
+
+.guide-section {
+    width: min(1100px, calc(100% - 40px));
+    margin: 70px auto 50px;
+    padding: 30px 34px;
+    background: #fffaf0;
+    border: 1px solid #f3e6cf;
+    border-radius: 20px;
+}
+
+.guide-title-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.guide-title-area h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #4b392c;
+}
+
+.guide-light {
+    font-size: 30px;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.guide-step {
+    padding: 10px 30px 15px;
+    text-align: center;
+}
+
+.guide-step + .guide-step {
+    border-left: 1px dashed #ddcdb5;
+}
+
+.guide-step-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.guide-step-heading h3 {
+    margin: 0;
+    color: #5f8f36;
+    font-size: 18px;
+}
+
+.guide-number {
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #78a936;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.guide-step-icon {
+    font-size: 24px;
+}
+
+.guide-step p {
+    margin: 0 0 18px;
+    color: #5c5148;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.guide-example {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: #fff3dd;
+    color: #6b5848;
+    font-size: 13px;
+}
+
+.guide-category-icons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.guide-category-icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.guide-category-icons span {
+    font-size: 28px;
+}
+
+.guide-category-icons small {
+    color: #5e5147;
+    font-size: 12px;
+}
+
+.guide-warning {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #efb64c;
+    border-radius: 10px;
+    background: #fff8e8;
+    color: #6c5945;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.guide-warning strong {
+    color: #ef7e1c;
+}
+
+/* スマートフォン */
+@media (max-width: 800px) {
+    .guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-step {
+        padding: 25px 10px;
+    }
+
+    .guide-step + .guide-step {
+        border-left: none;
+        border-top: 1px dashed #ddcdb5;
+    }
+}
+
 /* スマートフォン */
 @media (max-width: 800px) {
     .hero {
