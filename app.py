@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from cocona.categoryver2 import select_menu
+from cocona.categoryver import select_menu
 from data.data import recipes
 
 app = Flask(__name__)
