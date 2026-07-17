@@ -545,7 +545,7 @@ recipes = [
     },
     {
         "id": 123,
-        "name": "chineseくらげ",
+        "name": "中華くらげ",
         "category": "side",
         "ingredients": ["くらげ", "きゅうり"],
         "genre": "chinese"
@@ -713,7 +713,7 @@ recipes = [
     },
     {
         "id": 147,
-        "name": "きゅうりのchinese和え",
+        "name": "きゅうりの中華和え",
         "category": "side",
         "ingredients": ["きゅうり", "ごま"],
         "genre": "chinese"
@@ -797,7 +797,7 @@ recipes = [
     },
     {
         "id": 209,
-        "name": "chineseスープ",
+        "name": "中華スープ",
         "category": "soup",
         "ingredients": ["卵", "長ねぎ", "ごま", "鶏がらスープの素"],
         "genre": "chinese"
@@ -979,7 +979,7 @@ recipes = [
     },
     {
         "id": 235,
-        "name": "トマトと卵のchineseスープ",
+        "name": "トマトと卵の中華スープ",
         "category": "soup",
         "ingredients": ["トマト", "卵", "鶏がらスープの素"],
         "genre": "chinese"
@@ -993,14 +993,14 @@ recipes = [
     },
     {
         "id": 237,
-        "name": "チンゲン菜のchineseスープ",
+        "name": "チンゲン菜の中華スープ",
         "category": "soup",
         "ingredients": ["チンゲン菜", "卵", "鶏がらスープの素"],
         "genre": "chinese"
     },
     {
         "id": 238,
-        "name": "わかめと豆腐のchineseスープ",
+        "name": "わかめと豆腐の中華スープ",
         "category": "soup",
         "ingredients": ["わかめ", "豆腐", "鶏がらスープの素"],
         "genre": "chinese"
