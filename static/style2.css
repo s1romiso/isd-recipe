@@ -433,6 +433,52 @@ input[type="text"]:focus {
     }
 }
 
+/* =========================
+   フッター
+========================= */
+
+.footer {
+    margin-top: 80px;
+    padding: 45px 20px 30px;
+    background: #fff8f0;
+    border-top: 1px solid #f0e0c8;
+    text-align: center;
+}
+
+.footer-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4b392c;
+}
+
+.footer-description {
+    margin: 12px auto 24px;
+    max-width: 600px;
+    color: #6d6258;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.footer-line {
+    width: 70px;
+    height: 3px;
+    margin: 0 auto 24px;
+    background: linear-gradient(
+        90deg,
+        #f59e0b,
+        #8bc34a
+    );
+    border-radius: 999px;
+}
+
+.footer-copy {
+    margin: 0;
+    color: #9b8c80;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+}
+
 /* スマートフォン */
 @media (max-width: 800px) {
     .hero {
